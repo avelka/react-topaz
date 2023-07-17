@@ -58,6 +58,7 @@ const useSplitPointer = ({
 
     const resize = (e: PointerEvent) => {
       const offset = getOffset(e);
+      console.log(baseSize[axis], offset[axis], baseSize[axis] + offset[axis]);
       setContainerSize(baseSize[axis] + offset[axis]);
     };
     const stopResize = (e: PointerEvent) => {
@@ -68,6 +69,7 @@ const useSplitPointer = ({
 
     const startResize = (e: PointerEvent) => {
       if (disabled) return;
+      console.log(e);
       separator.setPointerCapture(e.pointerId);
       const expanded = separator.hasAttribute(ARIA.expanded);
       if (!expanded) {

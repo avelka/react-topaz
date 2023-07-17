@@ -6,7 +6,7 @@ import cssInjectedByJsPlugin from "vite-plugin-css-injected-by-js";
 import dts from "vite-plugin-dts";
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react(), cssInjectedByJsPlugin(), dts()],
+  plugins: [react(), cssInjectedByJsPlugin(), dts({ insertTypesEntry: true })],
   build: {
     lib: {
       entry: path.resolve(__dirname, "src/index.ts"),

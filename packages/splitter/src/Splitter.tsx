@@ -70,7 +70,7 @@ const Splitter = ({
 
   const refs = invert
     ? { start: split.secondaryRef, end: split.primaryRef }
-    : { start: split.secondaryRef, end: split.primaryRef };
+    : { start: split.primaryRef, end: split.secondaryRef };
 
   return (
     <div ref={split.containerRef} className={styles.root}>

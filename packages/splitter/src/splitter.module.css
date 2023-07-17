@@ -1,0 +1,34 @@
+.root {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  transition: all 0.1s linear;
+}
+.pane {
+  overflow: auto;
+}
+.separator {
+  display: block;
+  transition: background 0.1s linear;
+  background: hsl(0, 0%, 0%, 0.1);
+  --tz-split-pane-separator: 5px;
+  border: none;
+  padding: 0;
+}
+
+.separator:not([aria-disabled]):hover {
+  background: hsl(0, 0%, 0%, 0.2);
+}
+.separator[aria-orientation="horizontal"] {
+  cursor: col-resize;
+  width: var(--tz-split-pane-separator);
+}
+.separator[aria-orientation="vertical"] {
+  cursor: row-resize;
+  height: var(--tz-split-pane-separator);
+}
+
+.separator[aria-disabled] {
+  cursor: auto;
+  background: hsl(0, 0%, 0%, 0.025);
+}

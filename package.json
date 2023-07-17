@@ -4,7 +4,9 @@
     "build": "turbo run build",
     "dev": "turbo run dev",
     "lint": "turbo run lint",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "test": "turbo run test",
+    "publish-packages": "turbo run build && changeset version && changeset publish"
   },
   "devDependencies": {
     "@turbo/gen": "^1.9.7",
@@ -14,5 +16,8 @@
     "turbo": "latest"
   },
   "packageManager": "pnpm@7.15.0",
-  "name": "react-topaz"
+  "name": "react-topaz",
+  "dependencies": {
+    "@changesets/cli": "^2.26.2"
+  }
 }

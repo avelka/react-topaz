@@ -22,7 +22,7 @@ export const Default: Story = {
   render: () => (
     <>
       <div style={{ width: "70vw", height: "70vh" }}>
-        <Splitter max={300} value={150} min={100} disable>
+        <Splitter max={300} value={150} min={100}>
           <div>
             <ul>
               <li>
@@ -96,7 +96,7 @@ const CardList = ({ children }: { children: ReactNode }) => (
 const cards = new Array(20).fill(0);
 export const Inverted = () => (
   <div style={{ width: "100vw,", height: "100vh" }}>
-    <Splitter max={300} value={150} min={100}>
+    <Splitter max={400}>
       <CardList>
         {cards.map((_, i) => (
           <MockCard key={i}>{i}</MockCard>

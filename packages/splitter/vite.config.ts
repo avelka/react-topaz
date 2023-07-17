@@ -9,9 +9,9 @@ export default defineConfig({
   plugins: [react(), cssInjectedByJsPlugin(), dts()],
   build: {
     lib: {
-      entry: path.resolve(__dirname, "index.ts"),
+      entry: path.resolve(__dirname, "src/index.ts"),
       name: "react-topaz",
-      fileName: (format) => `index.${format}.js`,
+      fileName: (format) => `rtpz.splitter.${format}.js`,
     },
     rollupOptions: {
       external: ["react", "react-dom"],

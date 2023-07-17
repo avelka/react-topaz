@@ -1,13 +1,13 @@
 {
   "name": "@react-topaz/splitter",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "type": "module",
-  "main": "./dist/index.umd.js",
-  "module": "./dist/index.es.js",
+  "main": "./dist/rtpz.splitter.umd.js",
+  "module": "./dist/rtpz.splitter.es.js",
   "exports": {
     ".": {
-      "import": "./dist/index.es.js",
-      "require": "./dist/index.umd.js"
+      "import": "./dist/rtpz.splitter.es.js",
+      "require": "./dist/rtpz.splitter.umd.js"
     }
   },
   "files": [

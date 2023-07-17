@@ -1,5 +1,5 @@
 (function(){"use strict";try{if(typeof document<"u"){var a=document.createElement("style");a.appendChild(document.createTextNode("._root_13kmz_1{display:grid;width:100%;height:100%;transition:all .1s linear}._pane_13kmz_7{overflow:auto}._separator_13kmz_10{display:block;transition:background .1s linear;background:hsl(0,0%,0%,.1);--tz-split-pane-separator: 5px;border:none;padding:0}._separator_13kmz_10:not([aria-disabled]):hover{background:hsl(0,0%,0%,.2)}._separator_13kmz_10[aria-orientation=horizontal]{cursor:col-resize;width:var(--tz-split-pane-separator)}._separator_13kmz_10[aria-orientation=vertical]{cursor:row-resize;height:var(--tz-split-pane-separator)}._separator_13kmz_10[aria-disabled]{cursor:auto;background:hsl(0,0%,0%,.025)}")),document.head.appendChild(a)}}catch(r){console.error("vite-plugin-css-injected-by-js",r)}})();
-import qe, { useCallback as T, useEffect as Z, useRef as G, useLayoutEffect as xr, forwardRef as Xe } from "react";
+import qe, { useCallback as O, useEffect as Z, useRef as G, useLayoutEffect as xr, forwardRef as Xe } from "react";
 var me = { exports: {} }, H = {};
 /**
  * @license React
@@ -15,12 +15,12 @@ function wr() {
   if (Ue)
     return H;
   Ue = 1;
-  var s = qe, y = Symbol.for("react.element"), m = Symbol.for("react.fragment"), b = Object.prototype.hasOwnProperty, R = s.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED.ReactCurrentOwner, E = { key: !0, ref: !0, __self: !0, __source: !0 };
+  var s = qe, y = Symbol.for("react.element"), m = Symbol.for("react.fragment"), E = Object.prototype.hasOwnProperty, R = s.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED.ReactCurrentOwner, b = { key: !0, ref: !0, __self: !0, __source: !0 };
   function _(f, p, c) {
     var g, v = {}, S = null, A = null;
     c !== void 0 && (S = "" + c), p.key !== void 0 && (S = "" + p.key), p.ref !== void 0 && (A = p.ref);
     for (g in p)
-      b.call(p, g) && !E.hasOwnProperty(g) && (v[g] = p[g]);
+      E.call(p, g) && !b.hasOwnProperty(g) && (v[g] = p[g]);
     if (f && f.defaultProps)
       for (g in p = f.defaultProps, p)
         v[g] === void 0 && (v[g] = p[g]);
@@ -41,7 +41,7 @@ var J = {};
 var ze;
 function Pr() {
   return ze || (ze = 1, process.env.NODE_ENV !== "production" && function() {
-    var s = qe, y = Symbol.for("react.element"), m = Symbol.for("react.portal"), b = Symbol.for("react.fragment"), R = Symbol.for("react.strict_mode"), E = Symbol.for("react.profiler"), _ = Symbol.for("react.provider"), f = Symbol.for("react.context"), p = Symbol.for("react.forward_ref"), c = Symbol.for("react.suspense"), g = Symbol.for("react.suspense_list"), v = Symbol.for("react.memo"), S = Symbol.for("react.lazy"), A = Symbol.for("react.offscreen"), C = Symbol.iterator, I = "@@iterator";
+    var s = qe, y = Symbol.for("react.element"), m = Symbol.for("react.portal"), E = Symbol.for("react.fragment"), R = Symbol.for("react.strict_mode"), b = Symbol.for("react.profiler"), _ = Symbol.for("react.provider"), f = Symbol.for("react.context"), p = Symbol.for("react.forward_ref"), c = Symbol.for("react.suspense"), g = Symbol.for("react.suspense_list"), v = Symbol.for("react.memo"), S = Symbol.for("react.lazy"), A = Symbol.for("react.offscreen"), C = Symbol.iterator, I = "@@iterator";
     function L(e) {
       if (e === null || typeof e != "object")
         return null;
@@ -53,10 +53,10 @@ function Pr() {
       {
         for (var r = arguments.length, t = new Array(r > 1 ? r - 1 : 0), n = 1; n < r; n++)
           t[n - 1] = arguments[n];
-        O("error", e, t);
+        T("error", e, t);
       }
     }
-    function O(e, r, t) {
+    function T(e, r, t) {
       {
         var n = d.ReactDebugCurrentFrame, l = n.getStackAddendum();
         l !== "" && (r += "%s", t = t.concat([l]));
@@ -69,7 +69,7 @@ function Pr() {
     var o = !1, w = !1, W = !1, Q = !1, ee = !1, he;
     he = Symbol.for("react.module.reference");
     function Je(e) {
-      return !!(typeof e == "string" || typeof e == "function" || e === b || e === E || ee || e === R || e === c || e === g || Q || e === A || o || w || W || typeof e == "object" && e !== null && (e.$$typeof === S || e.$$typeof === v || e.$$typeof === _ || e.$$typeof === f || e.$$typeof === p || // This needs to include all possible module reference object
+      return !!(typeof e == "string" || typeof e == "function" || e === E || e === b || ee || e === R || e === c || e === g || Q || e === A || o || w || W || typeof e == "object" && e !== null && (e.$$typeof === S || e.$$typeof === v || e.$$typeof === _ || e.$$typeof === f || e.$$typeof === p || // This needs to include all possible module reference object
       // types supported by any Flight configuration anywhere since
       // we don't know which Flight build this will end up being used
       // with.
@@ -82,7 +82,7 @@ function Pr() {
       var l = r.displayName || r.name || "";
       return l !== "" ? t + "(" + l + ")" : t;
     }
-    function be(e) {
+    function Ee(e) {
       return e.displayName || "Context";
     }
     function F(e) {
@@ -93,11 +93,11 @@ function Pr() {
       if (typeof e == "string")
         return e;
       switch (e) {
-        case b:
+        case E:
           return "Fragment";
         case m:
           return "Portal";
-        case E:
+        case b:
           return "Profiler";
         case R:
           return "StrictMode";
@@ -110,10 +110,10 @@ function Pr() {
         switch (e.$$typeof) {
           case f:
             var r = e;
-            return be(r) + ".Consumer";
+            return Ee(r) + ".Consumer";
           case _:
             var t = e;
-            return be(t._context) + ".Provider";
+            return Ee(t._context) + ".Provider";
           case p:
             return Ge(e, e.render, "ForwardRef");
           case v:
@@ -130,18 +130,18 @@ function Pr() {
         }
       return null;
     }
-    var U = Object.assign, q = 0, Ee, Re, _e, xe, we, Pe, Oe;
-    function Te() {
+    var U = Object.assign, q = 0, be, Re, _e, xe, we, Pe, Te;
+    function Oe() {
     }
-    Te.__reactDisabledLog = !0;
+    Oe.__reactDisabledLog = !0;
     function Ze() {
       {
         if (q === 0) {
-          Ee = console.log, Re = console.info, _e = console.warn, xe = console.error, we = console.group, Pe = console.groupCollapsed, Oe = console.groupEnd;
+          be = console.log, Re = console.info, _e = console.warn, xe = console.error, we = console.group, Pe = console.groupCollapsed, Te = console.groupEnd;
           var e = {
             configurable: !0,
             enumerable: !0,
-            value: Te,
+            value: Oe,
             writable: !0
           };
           Object.defineProperties(console, {
@@ -167,7 +167,7 @@ function Pr() {
           };
           Object.defineProperties(console, {
             log: U({}, e, {
-              value: Ee
+              value: be
             }),
             info: U({}, e, {
               value: Re
@@ -185,7 +185,7 @@ function Pr() {
               value: Pe
             }),
             groupEnd: U({}, e, {
-              value: Oe
+              value: Te
             })
           });
         }
@@ -612,24 +612,24 @@ Check the top-level render call using <` + t + ">.");
             else
               Ne(k, e);
         }
-        return e === b ? hr(P) : gr(P), P;
+        return e === E ? hr(P) : gr(P), P;
       }
     }
-    function br(e, r, t) {
+    function Er(e, r, t) {
       return Me(e, r, t, !0);
     }
-    function Er(e, r, t) {
+    function br(e, r, t) {
       return Me(e, r, t, !1);
     }
-    var Rr = Er, _r = br;
-    J.Fragment = b, J.jsx = Rr, J.jsxs = _r;
+    var Rr = br, _r = Er;
+    J.Fragment = E, J.jsx = Rr, J.jsxs = _r;
   }()), J;
 }
 process.env.NODE_ENV === "production" ? me.exports = wr() : me.exports = Pr();
 var K = me.exports;
-const Or = "_root_13kmz_1", Tr = "_pane_13kmz_7", Sr = "_separator_13kmz_10", ge = {
-  root: Or,
-  pane: Tr,
+const Tr = "_root_13kmz_1", Or = "_pane_13kmz_7", Sr = "_separator_13kmz_10", ge = {
+  root: Tr,
+  pane: Or,
   separator: Sr
 }, Ve = {
   X: "x",
@@ -665,8 +665,18 @@ const Or = "_root_13kmz_1", Tr = "_pane_13kmz_7", Sr = "_separator_13kmz_10", ge
   role: "role"
 }, Cr = {
   separator: "separator"
-}, jr = ({ separatorRef: s, containerRef: y, setContainerSize: m, getCurrentSize: b, setLayout: R, min: E, max: _, direction: f, disabled: p }) => {
-  const c = T(() => {
+}, jr = ({
+  separatorRef: s,
+  containerRef: y,
+  setContainerSize: m,
+  getCurrentSize: E,
+  setLayout: R,
+  min: b,
+  max: _,
+  direction: f,
+  disabled: p
+}) => {
+  const c = O(() => {
     const o = s.current, w = y.current;
     if (!o || !w || p)
       return null;
@@ -674,30 +684,48 @@ const Or = "_root_13kmz_1", Tr = "_pane_13kmz_7", Sr = "_separator_13kmz_10", ge
       dir: f,
       collapsed: !o.hasAttribute(D.expanded)
     }), w.offsetHeight, w.style.removeProperty("transition");
-  }, [y, f, s, R]), g = T(() => {
-    m(E);
-  }, [E, m]), v = T(() => {
+  }, [y, f, s, R]), g = O(() => {
+    m(b);
+  }, [b, m]), v = O(() => {
     m(_);
-  }, [_, m]), S = T(() => {
+  }, [_, m]), S = O(() => {
     console.log("cyclePane is not implemented");
-  }, []), A = T((o) => {
-    const w = o.shiftKey ? 10 : 1;
-    m(b() - Be * w);
-  }, [b, m]), C = T((o) => {
-    const w = o.shiftKey ? 10 : 1;
-    m(b() + Be * w);
-  }, [b, m]), I = T((o) => {
-    f === z.horizontal && A(o);
-  }, [A, f]), L = T((o) => {
-    f === z.horizontal && C(o);
-  }, [f, C]), d = T((o) => {
-    f === z.vertical && C(o);
-  }, [f, C]), a = T((o) => {
-    f === z.vertical && A(o);
-  }, [A, f]), O = T(
+  }, []), A = O(
     (o) => {
-      var w;
-      const W = {
+      const w = o.shiftKey ? 10 : 1;
+      m(E() - Be * w);
+    },
+    [E, m]
+  ), C = O(
+    (o) => {
+      const w = o.shiftKey ? 10 : 1;
+      m(E() + Be * w);
+    },
+    [E, m]
+  ), I = O(
+    (o) => {
+      f === z.horizontal && A(o);
+    },
+    [A, f]
+  ), L = O(
+    (o) => {
+      f === z.horizontal && C(o);
+    },
+    [f, C]
+  ), d = O(
+    (o) => {
+      f === z.vertical && C(o);
+    },
+    [f, C]
+  ), a = O(
+    (o) => {
+      f === z.vertical && A(o);
+    },
+    [A, f]
+  ), T = O(
+    (o) => {
+      var W;
+      const w = {
         [Y.Enter]: c,
         [Y.Home]: g,
         [Y.End]: v,
@@ -707,7 +735,7 @@ const Or = "_root_13kmz_1", Tr = "_pane_13kmz_7", Sr = "_separator_13kmz_10", ge
         [Y.Up]: a,
         [Y.Down]: d
       };
-      (w = W[o.key]) === null || w === void 0 || w.call(W, o);
+      (W = w[o.key]) == null || W.call(w, o);
     },
     // eslint-disable-next-line react-hooks/exhaustive-deps
     []
@@ -715,23 +743,37 @@ const Or = "_root_13kmz_1", Tr = "_pane_13kmz_7", Sr = "_separator_13kmz_10", ge
   Z(() => {
     const o = s.current;
     if (!(!o || p))
-      return o.addEventListener(N.keydown, O), () => {
-        o.removeEventListener(N.keydown, O);
+      return o.addEventListener(N.keydown, T), () => {
+        o.removeEventListener(N.keydown, T);
       };
-  }, [s, O, p]);
+  }, [s, T, p]);
 }, ie = Math.round, Ar = (s, y, m) => Math.min(Math.max(s, y), m), se = (s) => ({
   x: s.getBoundingClientRect().width,
   y: s.getBoundingClientRect().height
-}), kr = ({ dir: s, collapsed: y, invert: m }) => {
-  const b = s === z.horizontal ? "grid-template-columns" : "grid-template-rows", R = `var(${M.primary}, auto)`, E = `var(${M.separator}, min-content)`, _ = `var(${M.secondary}, auto)`;
-  return [b, (y ? m ? ["auto", E, "0"] : ["0", E, "auto"] : m ? [_, E, R] : [R, E, _]).join(" ")];
-}, Dr = (s, y, m, b) => (R) => {
-  const E = Ar(ie(R), y, m || b);
-  s.style.setProperty(M.primary, `${E}px`), s.style.setProperty(M.secondary, `${ie(b - E)}px`);
-}, He = (s) => s === z.horizontal ? Ve.X : Ve.Y, Ir = ({ separatorRef: s, primaryRef: y, secondaryRef: m, containerRef: b, setContainerSize: R, setLayout: E, direction: _, invert: f, disabled: p }) => {
+}), kr = ({
+  dir: s,
+  collapsed: y,
+  invert: m
+}) => {
+  const E = s === z.horizontal ? "grid-template-columns" : "grid-template-rows", R = `var(${M.primary}, auto)`, b = `var(${M.separator}, min-content)`, _ = `var(${M.secondary}, auto)`;
+  return [E, (y ? m ? ["auto", b, "0"] : ["0", b, "auto"] : m ? [_, b, R] : [R, b, _]).join(" ")];
+}, Dr = (s, y, m, E) => (R) => {
+  const b = Ar(ie(R), y, m || E);
+  s.style.setProperty(M.primary, `${b}px`), s.style.setProperty(M.secondary, `${ie(E - b)}px`);
+}, He = (s) => s === z.horizontal ? Ve.X : Ve.Y, Ir = ({
+  separatorRef: s,
+  primaryRef: y,
+  secondaryRef: m,
+  containerRef: E,
+  setContainerSize: R,
+  setLayout: b,
+  direction: _,
+  invert: f,
+  disabled: p
+}) => {
   const c = G({ x: 0, y: 0 }), g = He(_);
   Z(() => {
-    const v = s.current, S = y.current, A = m.current, C = b.current;
+    const v = s.current, S = y.current, A = m.current, C = E.current;
     if (!v || !S || !A || !C)
       return;
     let I = se(S);
@@ -750,17 +792,17 @@ const Or = "_root_13kmz_1", Tr = "_pane_13kmz_7", Sr = "_separator_13kmz_10", ge
       R(I[g] + w[g]);
     }, a = (o) => {
       v.removeEventListener(N.pointermove, d), v.releasePointerCapture(o.pointerId), C.style.removeProperty("transition");
-    }, O = (o) => {
+    }, T = (o) => {
       if (p)
         return;
       if (v.setPointerCapture(o.pointerId), !v.hasAttribute(D.expanded)) {
-        v.toggleAttribute(D.expanded), E({ dir: _, collapsed: !1 }), o.preventDefault();
+        v.toggleAttribute(D.expanded), b({ dir: _, collapsed: !1 }), o.preventDefault();
         return;
       }
       I = se(S), c.current = { x: o.clientX, y: o.clientY }, v.addEventListener(N.pointermove, d), C.style.setProperty("transition", "none");
     };
-    return v.addEventListener(N.pointerdown, O), v.addEventListener(N.pointerup, a), () => {
-      v.removeEventListener(N.pointerdown, O), v.removeEventListener(N.pointerup, a);
+    return v.addEventListener(N.pointerdown, T), v.addEventListener(N.pointerup, a), () => {
+      v.removeEventListener(N.pointerdown, T), v.removeEventListener(N.pointerup, a);
     };
   }, [
     g,
@@ -768,13 +810,20 @@ const Or = "_root_13kmz_1", Tr = "_pane_13kmz_7", Sr = "_separator_13kmz_10", ge
     s,
     y,
     m,
-    b,
-    c,
     E,
+    c,
+    b,
     _,
     f
   ]);
-}, Fr = ({ value: s, min: y, max: m, direction: b, collapsed: R, invert: E }) => {
+}, Fr = ({
+  value: s,
+  min: y,
+  max: m,
+  direction: E,
+  collapsed: R,
+  invert: b
+}) => {
   const _ = G(null), f = G(null), p = G(null), c = G(null);
   Z(() => {
     const d = c.current;
@@ -787,26 +836,32 @@ const Or = "_root_13kmz_1", Tr = "_pane_13kmz_7", Sr = "_separator_13kmz_10", ge
       a.disconnect();
     };
   }, []);
-  const g = He(b), v = T(() => {
+  const g = He(E), v = O(() => {
     const d = _.current, a = p.current;
     return !d || !a ? 0 : ie(se(d)[g] + se(a)[g]);
-  }, [g]), S = T((d) => {
-    const a = f.current, O = _.current;
-    if (!a || !O || (a.setAttribute(D.valueMax, v().toString()), a.setAttribute(D.valueNow, L().toString()), !d))
+  }, [g]), S = O((d) => {
+    const a = f.current, T = _.current;
+    if (!a || !T || (a.setAttribute(D.valueMax, v().toString()), a.setAttribute(D.valueNow, L().toString()), !d))
       return;
     const o = `tpz-sp-primary:${crypto.randomUUID()}`;
-    a.setAttribute(D.valueMin, y.toString()), a.setAttribute(D.role, Cr.separator), a.setAttribute(D.orientation, b), a.setAttribute(D.controls, o), O.setAttribute("id", o), a.toggleAttribute(D.expanded, !0);
-  }, []), A = E ? M.secondary : M.primary, C = T((d) => {
-    const a = c.current;
-    if (!a)
-      return;
-    const [O, o] = kr(Object.assign(Object.assign({}, d), { invert: E }));
-    d.value && a.style.setProperty(A, `${d.value}px`), a.style.setProperty(O, o);
-  }, [E]), I = T((d) => {
-    const a = c.current, O = f.current;
-    if (!(!a || !O))
-      return O.setAttribute(D.valueNow, ie(d).toString()), Dr(a, y, m, v())(d);
-  }, [v, y]), L = T(() => {
+    a.setAttribute(D.valueMin, y.toString()), a.setAttribute(D.role, Cr.separator), a.setAttribute(D.orientation, E), a.setAttribute(D.controls, o), T.setAttribute("id", o), a.toggleAttribute(D.expanded, !0);
+  }, []), A = b ? M.secondary : M.primary, C = O(
+    (d) => {
+      const a = c.current;
+      if (!a)
+        return;
+      const [T, o] = kr({ ...d, invert: b });
+      d.value && a.style.setProperty(A, `${d.value}px`), a.style.setProperty(T, o);
+    },
+    [b]
+  ), I = O(
+    (d) => {
+      const a = c.current, T = f.current;
+      if (!(!a || !T))
+        return T.setAttribute(D.valueNow, ie(d).toString()), Dr(a, y, m, v())(d);
+    },
+    [v, y]
+  ), L = O(() => {
     const d = c.current;
     if (!d)
       return 0;
@@ -818,8 +873,8 @@ const Or = "_root_13kmz_1", Tr = "_pane_13kmz_7", Sr = "_separator_13kmz_10", ge
   }, []), Z(() => {
     s && I(s);
   }, [s]), xr(() => {
-    C({ dir: b, collapsed: R, value: s });
-  }, [c, b, R, C, s]), {
+    C({ dir: E, collapsed: R, value: s });
+  }, [c, E, R, C, s]), {
     setLayout: C,
     separatorRef: f,
     containerRef: c,
@@ -829,27 +884,49 @@ const Or = "_root_13kmz_1", Tr = "_pane_13kmz_7", Sr = "_separator_13kmz_10", ge
     getCurrentSize: L,
     getMaxSize: v
   };
-}, $r = Xe((s, y) => K.jsx("button", Object.assign({ ref: y }, s))), Ke = Xe(({ children: s }, y) => K.jsx("div", { ref: y, className: ge.pane, children: s })), Yr = ({ children: [s, y], min: m = 0, max: b = 0, value: R = 0, direction: E = z.horizontal, collapsed: _ = !1, invert: f = !1, disabled: p = !1 }) => {
+}, $r = Xe((s, y) => /* @__PURE__ */ K.jsx("button", { ref: y, ...s })), Ke = Xe(({ children: s }, y) => /* @__PURE__ */ K.jsx("div", { ref: y, className: ge.pane, children: s })), Yr = ({
+  children: [s, y],
+  min: m = 0,
+  max: E = 0,
+  value: R = 0,
+  direction: b = z.horizontal,
+  collapsed: _ = !1,
+  invert: f = !1,
+  disabled: p = !1
+}) => {
   const c = Fr({
     value: R,
     min: m,
-    max: b,
-    direction: E,
+    max: E,
+    direction: b,
     collapsed: _,
     invert: f
   });
-  jr(Object.assign(Object.assign({}, c), {
-    direction: E,
+  jr({
+    ...c,
+    direction: b,
     min: m,
     max: c.getMaxSize(),
     disabled: p
-  })), Ir(Object.assign(Object.assign({}, c), {
-    direction: E,
+  }), Ir({
+    ...c,
+    direction: b,
     invert: f,
     disabled: p
-  }));
+  });
   const g = f ? { start: c.secondaryRef, end: c.primaryRef } : { start: c.secondaryRef, end: c.primaryRef };
-  return K.jsxs("div", { ref: c.containerRef, className: ge.root, children: [K.jsx(Ke, { tabIndex: -1, ref: g.start, children: s }), K.jsx($r, { className: ge.separator, ref: c.separatorRef, "aria-disabled": p || void 0 }), K.jsx(Ke, { tabIndex: -1, ref: g.end, children: y })] });
+  return /* @__PURE__ */ K.jsxs("div", { ref: c.containerRef, className: ge.root, children: [
+    /* @__PURE__ */ K.jsx(Ke, { tabIndex: -1, ref: g.start, children: s }),
+    /* @__PURE__ */ K.jsx(
+      $r,
+      {
+        className: ge.separator,
+        ref: c.separatorRef,
+        "aria-disabled": p || void 0
+      }
+    ),
+    /* @__PURE__ */ K.jsx(Ke, { tabIndex: -1, ref: g.end, children: y })
+  ] });
 };
 export {
   Yr as default

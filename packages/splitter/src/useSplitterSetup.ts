@@ -71,7 +71,6 @@ const useSplitterSetup = ({
     separator.toggleAttribute(ARIA.expanded, true);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
-  const pname = invert ? CSS_PROP.secondary : CSS_PROP.primary;
 
   const setLayout = useCallback(
     (state: LayoutState) => {
@@ -79,7 +78,7 @@ const useSplitterSetup = ({
       if (!container) return;
       const [property, config] = getLayoutConfig({ ...state, invert });
       if (state.value) {
-        container.style.setProperty(pname, `${state.value}px`);
+        container.style.setProperty(CSS_PROP.primary, `${state.value}px`);
       }
       container.style.setProperty(property, config);
     },
@@ -101,7 +100,7 @@ const useSplitterSetup = ({
   const getCurrentSize = useCallback(() => {
     const container = containerRef.current;
     if (!container) return 0;
-    const size = container.style.getPropertyValue(pname);
+    const size = container.style.getPropertyValue(CSS_PROP.primary);
     return parseInt(size, 10);
   }, []);
 

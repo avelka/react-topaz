@@ -59,6 +59,7 @@ const Splitter = ({
     min,
     max: split.getMaxSize(),
     disabled,
+    invert,
   });
 
   useSplitterPointer({

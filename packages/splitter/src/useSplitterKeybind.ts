@@ -20,6 +20,7 @@ const useSplitKeybind = ({
   max,
   direction,
   disabled,
+  invert,
 }: {
   separatorRef: React.MutableRefObject<HTMLButtonElement | null>;
   containerRef: React.MutableRefObject<HTMLDivElement | null>;
@@ -30,7 +31,10 @@ const useSplitKeybind = ({
   max: number;
   direction: Direction;
   disabled: boolean;
+  invert: boolean;
 }) => {
+  const directionMultiplier = invert ? -1 : 1;
+
   const togglePrimaryCollapse = useCallback(() => {
     const separator = separatorRef.current;
     const container = containerRef.current;
@@ -62,16 +66,20 @@ const useSplitKeybind = ({
   const decrement = useCallback(
     (e: KeyboardEvent) => {
       const multiplier = e.shiftKey ? 10 : 1;
-      setContainerSize(getCurrentSize() - STEP * multiplier);
+      setContainerSize(
+        getCurrentSize() - STEP * directionMultiplier * multiplier
+      );
     },
     [getCurrentSize, setContainerSize]
   );
   const increment = useCallback(
     (e: KeyboardEvent) => {
       const multiplier = e.shiftKey ? 10 : 1;
-      setContainerSize(getCurrentSize() + STEP * multiplier);
+      setContainerSize(
+        getCurrentSize() + STEP * directionMultiplier * multiplier
+      );
     },
-    [getCurrentSize, setContainerSize]
+    [invert, getCurrentSize, setContainerSize]
   );
 
   const horizontalDecrement = useCallback(

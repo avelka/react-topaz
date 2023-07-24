@@ -1,13 +1,13 @@
 import { render } from "@testing-library/react";
-import Splitter from "./Splitter";
+import Carousel from "./Carousel";
 
-describe("Splitter", () => {
+describe("Carousel", () => {
   it("should render successfully", () => {
     render(
-      <Splitter>
+      <Carousel>
         <div>primary pane</div>
         <div>secondary pane</div>
-      </Splitter>
+      </Carousel>
     );
   });
 });

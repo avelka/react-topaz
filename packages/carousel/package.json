@@ -1,13 +1,13 @@
 {
-  "name": "@react-topaz/splitter",
-  "version": "0.3.0",
+  "name": "@react-topaz/carousel",
+  "version": "0.0.0",
   "type": "module",
-  "main": "./dist/rtpz.splitter.umd.js",
-  "module": "./dist/rtpz.splitter.es.js",
+  "main": "./dist/rtpz.carousel.umd.js",
+  "module": "./dist/rtpz.carousel.es.js",
   "exports": {
     ".": {
-      "import": "./dist/rtpz.splitter.es.js",
-      "require": "./dist/rtpz.splitter.umd.js"
+      "import": "./dist/rtpz.carousel.es.js",
+      "require": "./dist/rtpz.carousel.umd.js"
     }
   },
   "files": [

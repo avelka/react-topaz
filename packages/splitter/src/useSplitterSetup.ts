@@ -13,7 +13,8 @@ import {
   setNewSizeFn,
   getAxis,
 } from "./splitter.utils";
-
+const getRandomID = () =>
+  window.crypto?.randomUUID?.() || Math.random().toString(36);
 const useSplitterSetup = ({
   value,
   min,
@@ -61,7 +62,7 @@ const useSplitterSetup = ({
     separator.setAttribute(ARIA.valueMax, getMaxSize().toString());
     separator.setAttribute(ARIA.valueNow, getCurrentSize().toString());
     if (!isSetup) return;
-    const primaryId = `tpz-sp-primary:${crypto.randomUUID()}`;
+    const primaryId = `tpz-sp-primary:${getRandomID()}`;
     separator.setAttribute(ARIA.valueMin, min.toString());
     separator.setAttribute(ARIA.role, ARIA_ROLE.separator);
     separator.setAttribute(ARIA.orientation, direction);

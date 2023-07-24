@@ -6,7 +6,6 @@ const KEY = {
   Enter: "Enter",
   Home: "Home",
   End: "End",
-  F6: "F6",
   Left: "ArrowLeft",
   Right: "ArrowRight",
   Up: "ArrowUp",

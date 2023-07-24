@@ -59,10 +59,6 @@ const useSplitKeybind = ({
     setContainerSize(max);
   }, [max, setContainerSize]);
 
-  const cyclePane = useCallback(() => {
-    console.log("cyclePane is not implemented");
-  }, []);
-
   const decrement = useCallback(
     (e: KeyboardEvent) => {
       const multiplier = e.shiftKey ? 10 : 1;
@@ -117,7 +113,6 @@ const useSplitKeybind = ({
         [KEY.Enter]: togglePrimaryCollapse,
         [KEY.Home]: minPrimary,
         [KEY.End]: maxPrimary,
-        [KEY.F6]: cyclePane,
         [KEY.Left]: horizontalDecrement,
         [KEY.Right]: horizontalIncrement,
         [KEY.Up]: verticalDecrement,

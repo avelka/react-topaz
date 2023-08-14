@@ -1,1 +1,1 @@
-# `@react-topaz/slider`
+# `@react-topaz/carousel`

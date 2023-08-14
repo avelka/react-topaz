@@ -1,5 +1,11 @@
 # @react-topaz/splitter
 
+## 0.4.0
+
+### Minor Changes
+
+- clean up debug code
+
 ## 0.3.0
 
 ### Minor Changes

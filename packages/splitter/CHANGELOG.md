@@ -1,5 +1,11 @@
 # @react-topaz/splitter
 
+## 0.5.0
+
+### Minor Changes
+
+- 6902f1b: remove log and bump version
+
 ## 0.4.0
 
 ### Minor Changes

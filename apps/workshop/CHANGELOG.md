@@ -1,5 +1,12 @@
 # workshop
 
+## 0.0.5
+
+### Patch Changes
+
+- Updated dependencies [6902f1b]
+  - @react-topaz/splitter@0.5.0
+
 ## 0.0.4
 
 ### Patch Changes

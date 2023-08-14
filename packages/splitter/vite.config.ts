@@ -10,7 +10,7 @@ export default defineConfig({
   build: {
     lib: {
       entry: path.resolve(__dirname, "src/index.ts"),
-      name: "react-topaz",
+      name: "reactTopaz",
       fileName: (format) => `rtpz.splitter.${format}.js`,
     },
     rollupOptions: {

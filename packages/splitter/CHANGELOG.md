@@ -1,5 +1,11 @@
 # @react-topaz/splitter
 
+## 0.6.0
+
+### Minor Changes
+
+- Fix: change type definition config
+
 ## 0.5.0
 
 ### Minor Changes

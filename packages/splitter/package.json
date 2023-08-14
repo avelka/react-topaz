@@ -1,6 +1,6 @@
 {
   "name": "@react-topaz/splitter",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "type": "module",
   "main": "./dist/rtpz.splitter.umd.js",
   "module": "./dist/rtpz.splitter.es.js",

@@ -1,5 +1,11 @@
 # @react-topaz/splitter
 
+## 0.7.0
+
+### Minor Changes
+
+- update: add onResize callback
+
 ## 0.6.0
 
 ### Minor Changes

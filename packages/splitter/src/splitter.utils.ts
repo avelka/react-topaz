@@ -40,9 +40,16 @@ const getLayoutConfig = ({
   return [layout, currentConfig.join(" ")];
 };
 const setNewSizeFn =
-  (container: HTMLElement, min: number, max: number, total: number) =>
+  (
+    container: HTMLElement,
+    min: number,
+    max: number,
+    total: number,
+    callback?: (s: number) => void
+  ) =>
   (newSize: number) => {
     const s = clamp(r(newSize), min, max || total);
+    callback?.(s);
     container.style.setProperty(CSS_PROP.primary, `${s}px`);
     container.style.setProperty(CSS_PROP.secondary, `${r(total - s)}px`);
   };

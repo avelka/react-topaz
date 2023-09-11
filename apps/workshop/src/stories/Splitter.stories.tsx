@@ -22,7 +22,12 @@ export const Default: Story = {
   render: () => (
     <>
       <div style={{ width: "70vw", height: "70vh" }}>
-        <Splitter max={300} value={150} min={100}>
+        <Splitter
+          max={300}
+          value={150}
+          min={100}
+          onResize={(v: number) => console.log("Resizing:", v)}
+        >
           <div>
             <ul>
               <li>

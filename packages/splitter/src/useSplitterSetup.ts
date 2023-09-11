@@ -22,6 +22,7 @@ const useSplitterSetup = ({
   direction,
   collapsed,
   invert,
+  onResizeCallback,
 }: {
   value: number;
   min: number;
@@ -29,6 +30,7 @@ const useSplitterSetup = ({
   direction: Direction;
   collapsed: boolean;
   invert: boolean;
+  onResizeCallback?: (size: number) => void;
 }) => {
   const primaryRef = useRef<HTMLDivElement | null>(null);
   const separatorRef = useRef<HTMLButtonElement | null>(null);
@@ -93,7 +95,13 @@ const useSplitterSetup = ({
 
       if (!container || !separator) return;
       separator.setAttribute(ARIA.valueNow, r(size).toString());
-      return setNewSizeFn(container, min, max, getMaxSize())(size);
+      return setNewSizeFn(
+        container,
+        min,
+        max,
+        getMaxSize(),
+        onResizeCallback
+      )(size);
     },
     [getMaxSize, min]
   );
@@ -116,7 +124,7 @@ const useSplitterSetup = ({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [value]);
   useLayoutEffect(() => {
-    setLayout({ dir: direction, collapsed: collapsed, value });
+    setLayout({ dir: direction, collapsed, value });
   }, [containerRef, direction, collapsed, setLayout, value]);
 
   return {

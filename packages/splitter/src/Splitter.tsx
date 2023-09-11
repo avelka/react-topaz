@@ -33,6 +33,7 @@ type SplitterProps = {
   collapsed?: boolean;
   invert?: boolean;
   disabled?: boolean;
+  onResize?: (size: number) => void;
 };
 
 const Splitter = ({
@@ -44,6 +45,7 @@ const Splitter = ({
   collapsed = false,
   invert = false,
   disabled = false,
+  onResize = () => {},
 }: HTMLAttributes<HTMLDivElement> & SplitterProps) => {
   const split = useSplitterSetup({
     value,
@@ -52,6 +54,7 @@ const Splitter = ({
     direction,
     collapsed,
     invert,
+    onResizeCallback: onResize,
   });
 
   useSplitterKeybind({
